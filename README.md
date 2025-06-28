@@ -1,71 +1,79 @@
-# hex2tw README
+ _               ____  _            
+| |__   _____  _|___ \| |___      __
+| '_ \ / _ \ \/ / __) | __\ \ /\ / /
+| | | |  __/>  < / __/| |_ \ V  V / 
+|_| |_|\___/_/\_\_____|\__| \_/\_/  
 
-This is the README for your extension "hex2tw". After writing up a brief description, we recommend including the following sections.
+# hex2tw
 
-## Features
-
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
-
-For example if there is an image subfolder under your extension project workspace:
-
-\!\[feature X\]\(images/feature-x.png\)
-
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
-
-## Requirements
-
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
-
-## Extension Settings
-
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
+`hex2tw` is a VS Code extension that helps you convert hex color codes to their Tailwind CSS color aliases. Just type any hex value (e.g. `#f8f`, `#34d399`) inside className strings or style blocks, press `Ctrl + Space`, and get instant suggestions with their matching Tailwind names.
 
 ---
 
-## Following extension guidelines
+## Features
 
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
+- ✅ Autocomplete Tailwind color aliases when you start typing hex values.
+- 🎯 Trigger suggestions manually via `Ctrl + Space`.
+- 🧠 Suggests based on partial hex match (e.g. `#f8f`).
+- 💬 Replaces the hex with the Tailwind class directly.
+- 🧬 Works inside `className="..."` or any text line.
+- 🔧 Supports JS, TS, JSX, TSX, and HTML.
 
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
+---
+
+## Requirements
+
+- A `tailwind.config.js` file in your workspace.
+- Your custom or extended colors should be flattened if nested.
+- No internet connection needed – works offline.
+
+---
+
+## Extension Settings
+
+This extension does not add any new settings yet.
+
+---
+
+## Known Issues
+
+- Does not support fuzzy searching or hex variants like `rgb()` or `hsl()`.
+- Suggestions only appear when hex begins with `#` and is typed manually.
+- No hover/diagnostic hints (planned for future).
+
+---
+
+## Release Notes
+
+### 1.0.0
+
+- 🚀 Initial release of `hex2tw`
+- Added support for hex to Tailwind alias suggestion.
+- Triggered with `#` and `Ctrl + Space`.
+
+---
+
+## Following Extension Guidelines
+
+This extension follows the official [VS Code extension guidelines](https://code.visualstudio.com/api/references/extension-guidelines) to ensure optimal performance and usability.
+
+---
 
 ## Working with Markdown
 
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
+You can preview this file directly in VS Code:
 
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
+- Split the editor: `Ctrl+\`
+- Toggle preview: `Ctrl+Shift+V`
+- Trigger markdown IntelliSense: `Ctrl+Space`
 
-## For more information
+---
 
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
+## For More Information
 
-**Enjoy!**
+- [Tailwind CSS Documentation](https://tailwindcss.com/docs/customizing-colors)
+- [VS Code Extension API](https://code.visualstudio.com/api)
+- [Markdown Syntax](https://www.markdownguide.org/basic-syntax/)
+
+---
+Enjoy using `hex2tw` and speed up your Tailwind workflow!
