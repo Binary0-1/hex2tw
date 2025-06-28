@@ -9,13 +9,39 @@
   "categories": [
     "Other"
   ],
-  "activationEvents": [],
+   "activationEvents": [
+    "onStartupFinished",
+    "workspaceContains:tailwind.config.js"
+  ],
   "main": "./dist/extension.js",
   "contributes": {
-    "commands": [
+    "languages": [
       {
-        "command": "hex2tw.helloWorld",
-        "title": "Hello World"
+        "id": "javascript",
+        "aliases": [
+          "JavaScript"
+        ],
+        "extensions": [
+          ".js"
+        ]
+      },
+      {
+        "id": "typescript",
+        "aliases": [
+          "TypeScript"
+        ],
+        "extensions": [
+          ".ts"
+        ]
+      },
+      {
+        "id": "html",
+        "aliases": [
+          "HTML"
+        ],
+        "extensions": [
+          ".html"
+        ]
       }
     ]
   },
